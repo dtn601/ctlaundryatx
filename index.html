@@ -19,22 +19,30 @@
     <link rel="icon" href="" type="image/x-icon">
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+<!--     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"> -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/landing-page.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="vendor/jquery/jquery.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!--     <script src="vendor/jquery/jquery.min.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   </head>
 
   <body>
@@ -44,17 +52,26 @@
             <a href="index.html" class="brand-logo">CT Laundry</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a id="" class="navLink" href="">About</a></li>
-                <li><a id="" class="navLink" href="">Residential Services</a></li>
-                <li><a id="" class="navLink" href="">Commercial Services</a></li>
-                <li><a id="" class="navLink" href="">FAQ</a></li>
-                <li><a id="" class="navLink" href="">Locations</a></li>
+              <li><a id="navAbout" class="navLink" href="#">About</a></li>
+              <li><a id="navResidential" class="navLink" href="#">Residential Services</a></li>
+              <li><a id="navCommercial" class="navLink" href="#">Commercial Services</a></li>
+              <li><a id="navFAQ" class="navLink" href="#">FAQ</a></li>
+              <li><a id="navLocations" class="navLink" href="#">Locations</a></li>
             </ul>
         </div>
         </nav>
     </div>
 
+    <ul class="side-nav" id="mobile-demo">
+      <li><a id="sidenavAbout" class="navLink" href="#">About</a></li>
+      <li><a id="sidenavResidential" class="navLink" href="#">Residential Services</a></li>
+      <li><a id="sidenavCommercial" class="navLink" href="#">Commercial Services</a></li>
+      <li><a id="sidenavFAQ" class="navLink" href="#">FAQ</a></li>
+      <li><a id="sidenavLocations" class="navLink" href="#">Locations</a></li>
+    </ul>    
+
     <!-- Masthead -->
+  <main id="mainSection">
     <header class="masthead text-white text-center">
       <div class="overlay"></div>
       <div class="container">
@@ -68,17 +85,17 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <div class="features-icons-icon d-flex">
-                <i class="icon-screen-desktop m-auto text-primary"></i>
+              <div class="features-icons-icon">
+                <i class="features-icon fas fa-home fa-5x"></i>
               </div>
               <h3>Residential</h3>
-              <p class="lead mb-0">Let us pick it up and drop it off daily!</p>
+              <p class="lead mb-0">100's of washers and dryers at your friendly neighborhood laundromat.</p>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-              <div class="features-icons-icon d-flex">
-                <i class="icon-layers m-auto text-primary"></i>
+              <div class="features-icons-icon">
+                <i class="fas fa-building fa-5x"></i>
               </div>
               <h3>Commercial</h3>
               <p class="lead mb-0">We serve the needs of local businesses all around Austin.</p>
@@ -86,11 +103,11 @@
           </div>
           <div class="col-lg-4">
             <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-              <div class="features-icons-icon d-flex">
-                <i class="icon-check m-auto text-primary"></i>
+              <div class="features-icons-icon">
+                <i class="fas fa-car fa-5x"></i>
               </div>
               <h3>Drop Off</h3>
-              <p class="lead mb-0">In a pinch? Just drop it off at our South Congress location</p>
+              <p class="lead mb-0">In a pinch? Just drop it off at any of our locations</p>
             </div>
           </div>
         </div>
@@ -102,31 +119,31 @@
       <div class="container-fluid p-0">
         <div class="row no-gutters">
 
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/homes.jpg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>Residential</h2>
-            <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+            <p class="lead mb-0">Each location offers a large selection of washers and dryers for all of your cleaning needs. Fully attended, our cleaning specialists are there to assist you with any needs and/or questions that you could have. Click her for more details.</p>
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/dtaustin.jpg');"></div>
           <div class="col-lg-6 my-auto showcase-text">
             <h2>Commercial</h2>
-            <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
+            <p class="lead mb-0">We offer a range of commercial services from laundry management to drop-off and pick-up services for local Austin businesses. Click here for more details.</p>
           </div>
         </div>
         <div class="row no-gutters">
-          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/foldedtees.jpg');"></div>
           <div class="col-lg-6 order-lg-1 my-auto showcase-text">
             <h2>Drop Off</h2>
-            <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+            <p class="lead mb-0">Can't get your laundry done? How do you even fold a fitted sheet? Come drop off your laundry and we'll get it all sorted for you! Find your nearest location below.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Call to Action -->
-    <section class="call-to-action text-white text-center">
+    <!-- <section class="call-to-action text-white text-center">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
@@ -147,10 +164,60 @@
           </div>
         </div>
       </div>
+    </section> -->
+  <!-- locations -->
+    <section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+              <h4>CT Laundry</h4>
+                  <div class="center-align">
+                      <a href="#CTModal" id="btn-ctlaundry" class="modal-trigger">
+                        <img class="locationimg" src="/img/southaustin.jpg">
+                      </a>
+                  </div>
+          </div>
+          <div class="col-lg-6">
+              <h4>Spincycle Laundry</h4>
+                  <div class="center-align">
+                      <a href="#SpinCycleModal" id="btn-spincyclelaundry" class="modal-trigger">
+                        <img class="locationimg" src="/img/northaustin.jpg">
+                      </a>
+                  </div>      
+          </div>
+        </div>
+      </div>
     </section>
+  </main>
+<!-- Location Modals -->
+<div id="CTModal" class="modal">
+    <div class="modal-content LocationModal-content">
+        <h4>CT Laundry</h4>
+        <p>Give us your info and we'll get a demo set up of our products!</p>
+    </div>
+        <div class="row">
+          <p> hello </p>
+        </div>
+    <div class="modal-footer LocationModal-footer">
+        <input type="submit" class="waves-effect waves-green btn-flat" id="CTRequest" value="Submit">
+    </div>
+    </div>
+
+<div id="SpinCycleModal" class="modal">
+    <div class="modal-content LocationModal-content">
+        <h4>SpinCycle Laundry</h4>
+        <p>Give us your info and we'll get a demo set up of our products!</p>
+    </div>
+        <div class="row">
+          <p> hello </p>
+        </div>
+    <div class="modal-footer LocationModal-footer">
+        <input type="submit" class="waves-effect waves-green btn-flat" id="SpinCycleRequest" value="Submit">
+    </div>
+    </div>
 
     <!-- Commercial Services -->
-    <section class="showcase">
+    <section id="commercialSection" class="showcase">
       <div class="container-fluid p-0">
         <div class="row no-gutters">
 
@@ -164,13 +231,82 @@
           <div class="col-lg-6 my-auto showcase-text">
             <h2>ALL THE THINGS</h2>
             <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde aperiam minus rerum corrupti ipsam, ut quos illum voluptatem? Molestias omnis, nobis. Error nemo ad numquam autem laudantium fuga repellendus molestias?</p>
+              <div class="row" id="demoBtn">
+                  <div class="center-align">
+                      <a href="#demoModal" id="btn-demo" class="waves-effect waves-light modal-trigger btn-large">Request a Demo</a>
+                  </div>
+              </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Commercial Modal -->
+    <div id="demoModal" class="modal">
+    <div class="modal-content demoModal-content">
+        <h4>Get a Demo</h4>
+        <p>Give us your info and we'll get a demo set up of our products!</p>
+    </div>
+        <div class="row">
+        <form class="col s12" id="demoForm" action="/demoRequest" method="POST">
+            <div class="row">
+            <div class="input-field col s6">
+                <input id="companyName" name="companyName"type="text" class="validate">
+                <label for="companyName">*Company/School Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="contactName" name="contactName" type="text" class="validate">
+                <label for="contactName">*Contact Name</label>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="contactTitle" name="contactTitle" type="text" class="validate">
+                    <label for="contactTitle">Contact's Position/Title</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="contactEmail" name="contactEmail" type="text" class="validate">
+                    <label for="contactEmail">*Email</label>
+                </div>
+            </div>
+            <div class="row">
+            <div class="input-field col s6">
+                <input id="contactPhone" name="contactPhone" type="text" class="validate">
+                <label for="contactPhone">Phone</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="companyWebsite" name="companyWebsite" type="text" class="validate">
+                <label for="companyWebsite">*Website</label>
+            </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <select name="productDemo">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="mobileApp">Mobile App</option>
+                        <option value="dispatch">Dispatch App</option>
+                        <option value="provider">Provider Site</option>
+                        </select>
+                    <label>Product Select</label>
+                </div>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="companyAddInfo" name="companyAddInfo" class="materialize-textarea"></textarea>
+                <label for="companyAddInfo">Additional Information</label>
+            </div>
+            <div class="input-field col s12">
+                <textarea id="howYouHear" name="howYouHear" class="materialize-textarea"></textarea>
+                <label for="howYouHear">How did you hear about us?</label>
+            </div>
+            </div>
+        </form>
+        </div>
+    <div class="modal-footer demoModal-footer">
+        <input type="submit" class="waves-effect waves-green btn-flat" id="demoRequest" value="Submit">
+    </div>
+    </div>
+
       <!-- Residential Services -->
-    <section class="showcase">
+    <section id="residentialSection" class="showcase">
       <div class="container-fluid p-0">
         <div class="row no-gutters">
 
@@ -190,7 +326,7 @@
     </section>
 
     <!-- Locations -->
-    <section class="features-icons bg-light text-center">
+    <section id="locationsSection" class="features-icons bg-light text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -204,7 +340,7 @@
     </section>
 
     <!-- CT Laundry -->
-    <section class="features-icons bg-light text-center">
+    <section id="ctlaundrySection" class="features-icons bg-light text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -220,7 +356,7 @@
     </section>
 
     <!-- Spincycle -->
-    <section class="features-icons bg-light text-center">
+    <section id="spincycleSection" class="features-icons bg-light text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -236,7 +372,7 @@
     </section>
 
     <!-- About -->
-    <section class="showcase">
+    <section id="aboutSection" class="showcase">
       <div class="container-fluid p-0">
         <div class="row no-gutters">
 
@@ -270,7 +406,7 @@
     </section>
 
 <!-- FAQ -->
-    <section class="features-icons bg-light text-center">
+    <section id="faqSection" class="features-icons bg-light text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -331,11 +467,8 @@
         </div>
       </div>
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    
+    <script src="js/app.js"></script>
 
   </body>
 
