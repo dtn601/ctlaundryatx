@@ -228,20 +228,32 @@
     <section id="commercialSection" class="showcase">
       <div class="container-fluid p-0">
         <div class="row no-gutters">
-
-          <div class="col-lg-12 order-lg-1 my-auto showcase-text">
-            <h2>Commercial Services</h2>
-            <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit possimus corrupti voluptatum asperiores esse earum explicabo modi recusandae hic. Perspiciatis sit ipsa nemo dicta neque aspernatur et distinctio numquam perferendis.</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/washingmachine.jpg');"></div>
           <div class="col-lg-6 my-auto showcase-text">
-            <h2>ALL THE THINGS</h2>
-            <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde aperiam minus rerum corrupti ipsam, ut quos illum voluptatem? Molestias omnis, nobis. Error nemo ad numquam autem laudantium fuga repellendus molestias?</p>
+            <h2>Commercial Services</h2>
+            <p class="lead mb-0">We currently offer businesses laundry pick up and drop offs in and around South Austin.</p>
+            <br>
+            <p> We're the perfect solution for all sorts of businesses! </p>
+            <p><i class="fas fa-hospital fa-3x"></i> Dental Clinics, Health Clinics, Veterinarians
+            </p>
+            <p><i class="fas fa-building fa-3x"></i> Spas, Gyms, Yoga
+              
+            </p>
+            <p><i class="fas fa-utensils fa-3x"></i> Resuarants, Cafes, Bars
+              
+            </p>
+            <p><i class="fas fa-university fa-3x"></i> Schools, Day Cares, Universities
+              
+            </p>
+            <p><i class="fas fa-user fa-3x"></i> Uniforms, retail
+              
+            </p>
+            <p><i class="fas fa-bed fa-3x"></i> Airbnbs, Hotels, Motels
+              
+            </p><br>
               <div class="row" id="demoBtn">
                   <div class="center-align">
-                      <a href="#demoModal" id="btn-demo" class="waves-effect waves-light modal-trigger btn-large">Request a Demo</a>
+                      <a href="#demoModal" id="btn-demo" class="waves-effect waves-light modal-trigger btn-large">Request a Quote</a>
                   </div>
               </div>
           </div>
@@ -252,56 +264,51 @@
     <!-- Commercial Modal -->
     <div id="demoModal" class="modal">
     <div class="modal-content demoModal-content">
-        <h4>Get a Demo</h4>
-        <p>Give us your info and we'll get a demo set up of our products!</p>
+        <h4>Get a Quote</h4>
+        <p>Send us some info and we'll get started on a personalized quote!</p>
     </div>
         <div class="row">
-        <form class="col s12" id="demoForm" action="/demoRequest" method="POST">
+        <form class="col-lg-12" id="demoForm" action="/demoRequest" method="POST">
             <div class="row">
-            <div class="input-field col s6">
-                <input id="companyName" name="companyName"type="text" class="validate">
-                <label for="companyName">*Company/School Name</label>
-            </div>
-            <div class="input-field col s6">
-                <input id="contactName" name="contactName" type="text" class="validate">
-                <label for="contactName">*Contact Name</label>
+              <div class="input-field col-lg-6">
+                  <input id="companyName" name="companyName" type="text" class="validate">
+                  <label for="companyName">*Company</label>
+              </div>
+              <div class="input-field col-lg-6">
+                  <input id="contactName" name="contactName" type="text" class="validate">
+                  <label for="contactName">*Contact Name</label>
+              </div>
             </div>
             <div class="row">
-                <div class="input-field col s6">
-                    <input id="contactTitle" name="contactTitle" type="text" class="validate">
-                    <label for="contactTitle">Contact's Position/Title</label>
-                </div>
-                <div class="input-field col s6">
+                <div class="input-field col-lg-6">
                     <input id="contactEmail" name="contactEmail" type="text" class="validate">
                     <label for="contactEmail">*Email</label>
                 </div>
-            </div>
-            <div class="row">
-            <div class="input-field col s6">
-                <input id="contactPhone" name="contactPhone" type="text" class="validate">
-                <label for="contactPhone">Phone</label>
-            </div>
-            <div class="input-field col s6">
-                <input id="companyWebsite" name="companyWebsite" type="text" class="validate">
-                <label for="companyWebsite">*Website</label>
-            </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <select name="productDemo">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="mobileApp">Mobile App</option>
-                        <option value="dispatch">Dispatch App</option>
-                        <option value="provider">Provider Site</option>
-                        </select>
-                    <label>Product Select</label>
+                <div class="input-field col-lg-6">
+                    <input id="contactPhone" name="contactPhone" type="text" class="validate">
+                    <label for="contactPhone">*Phone</label>
                 </div>
             </div>
-            <div class="input-field col s12">
+            <div class="row">            
+              <div class="input-field col-lg-6">
+                  <input id="companyWebsite" name="companyWebsite" type="text" class="validate">
+                  <label for="companyWebsite">*Website</label>
+              </div>
+              <div class="input-field col-lg-6">
+                  <select name="productDemo">
+                      <option value="" disabled selected>Choose your option</option>
+                      <option value="mobileApp">Pick and Delivery</option>
+                      <option value="dispatch">Delivery Only</option>
+                      <option value="provider">Monthly Invoicing</option>
+                      </select>
+                  <label>Service</label>
+              </div>
+            </div>
+            <div class="input-field col-lg-12">
                 <textarea id="companyAddInfo" name="companyAddInfo" class="materialize-textarea"></textarea>
                 <label for="companyAddInfo">Additional Information</label>
             </div>
-            <div class="input-field col s12">
+            <div class="input-field col-lg-12">
                 <textarea id="howYouHear" name="howYouHear" class="materialize-textarea"></textarea>
                 <label for="howYouHear">How did you hear about us?</label>
             </div>
@@ -317,17 +324,13 @@
     <section id="residentialSection" class="showcase">
       <div class="container-fluid p-0">
         <div class="row no-gutters">
-
-          <div class="col-lg-12 order-lg-1 my-auto showcase-text">
-            <h2>Residential Services</h2>
-            <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit possimus corrupti voluptatum asperiores esse earum explicabo modi recusandae hic. Perspiciatis sit ipsa nemo dicta neque aspernatur et distinctio numquam perferendis.</p>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/sfhome.jpg');"></div>
           <div class="col-lg-6 my-auto showcase-text">
-            <h2>ALL THE THINGS</h2>
-            <p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde aperiam minus rerum corrupti ipsam, ut quos illum voluptatem? Molestias omnis, nobis. Error nemo ad numquam autem laudantium fuga repellendus molestias?</p>
+            <h2>Residential Services</h2>
+            <p class="lead mb-0">Our Laundromats offers clean, low price, and high quality laundry services in Austin.</p>
+            <h4>Wash &amp; Fold</h4>
+            <p> You can drop off your laundry at either of our locations for $1.00 per pound with a 10 pound minimum. Blankets, comforters, and other large items are $15. Senior and student discounts available!. Your clothes will be available with free same day service if dropped off before 11am Monday through Saturday. After 11am, laundry will be done by the next day.</p>
+            <p>For commercial drop off and pick ups, please check out the commercial page.</p>
           </div>
         </div>
       </div>
